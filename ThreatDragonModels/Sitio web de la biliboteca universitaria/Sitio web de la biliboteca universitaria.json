@@ -67,8 +67,8 @@
                 "text": "Usuario"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -165,9 +165,34 @@
               "isTrustBoundary": false,
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "providesAuthentication": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "8eced98e-af01-45d3-b405-a75c9597b949",
+                  "title": "Suplantación de identidad",
+                  "status": "Open",
+                  "severity": "Low",
+                  "type": "Spoofing",
+                  "description": "Acción de amenaza destinada a acceder y utilizar las redenciales de otro usuario, como el nombre de usuario y la contraseña.",
+                  "mitigation": "1. Autenticación\nadecuada\n2. Proteger datos secretos\n3. No almacenar secretos",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 1,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 1,
+                "repudiation": 0
+              }
+            },
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove"
+              ],
+              "name": null
             }
           },
           {
@@ -988,6 +1013,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 12,
             "ports": {
               "groups": {
                 "top": {
@@ -1071,7 +1097,6 @@
               ]
             },
             "id": "e2339345-e560-43f1-8ca6-3b816a9f1884",
-            "zIndex": 12,
             "data": {
               "type": "tm.Actor",
               "name": "Web\nApplication config",
@@ -1105,6 +1130,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 13,
             "ports": {
               "groups": {
                 "top": {
@@ -1188,7 +1214,6 @@
               ]
             },
             "id": "56333b0c-c640-495a-9028-aa88e1f6121a",
-            "zIndex": 13,
             "data": {
               "type": "tm.Actor",
               "name": "Paginas web\nen disco",
@@ -2261,6 +2286,6 @@
     ],
     "diagramTop": 2,
     "reviewer": "Guillermo Vera",
-    "threatTop": 0
+    "threatTop": 1
   }
 }
